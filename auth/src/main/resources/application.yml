@@ -1,0 +1,23 @@
+spring:
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    database: MYSQL
+    openInView: false
+    show_sql: false
+    generate-ddl: true
+    hibernate:
+      ddl-auto: none
+      naming.physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hibernate.hbm2ddl.auto: none
+      hibernate.cache.use_second_level_cache: false
+      hibernate.cache.use_query_cache: true
+      hibernate.generate_statistics: false
+      hibernate.id.new_generator_mappings: false
+  datasource:
+    dataSourceClassName: com.mysql.cj.jdbc.MysqlDataSource
+    hikari:
+      dataSourceProperties:
+        cachePrepStmts: true
+        prepStmtCacheSize: 250
+        prepStmtCacheSqlLimit: 2048
